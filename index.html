@@ -95,10 +95,13 @@
             <img class="arrow" src="./assets/svg/down-arrow.svg" alt="" />
           </div>
           <div class="growth-right">
-            <img src="./assets/svg/line-active.png" alt="" class="line-active">
             <div class="item">
-              <img src="./assets/svg/rectangle-active.png" alt="" />
+              <div class="circle">
+    </div>
               <p class="text">CHAOTIC</p>
+            </div>
+            <div class="line">
+
             </div>
           </div>
         </div>
@@ -108,7 +111,7 @@
       <div class="container">
         <div class="content-strategy">
           <div class="strategy-top">
-            <h2 class="title">Strategy that ships</h2>
+            <h2 class="strategy-title">Strategy that ships</h2>
             <h3 class="desc">
               Abstract Group is a cross-disciplinary studio that builds </br> winning
               GTM strategies for B2B & SaaS startups.
@@ -216,7 +219,7 @@
             <img src="./assets/img/SVG-6.png" alt="">
             <img src="./assets/img/SVG-7.png" alt="">
           </div>
-          <button class="button-primary">Schedule a call</button>
+          <button class="button-primary button-logos">Schedule a call</button>
         </div>
       </div>
     </section>
@@ -229,7 +232,7 @@
             </h2>
             <div class="wave">
               <img src="./assets/img/Play Passive.png" alt="">
-              <img src="./assets/img/Sound wave passive.png" alt="">
+              <div id="waveform"></div>
             </div>
           </div>
           <div class="bubble">
@@ -260,7 +263,7 @@
                 Y'all are champs, you guys know what the f*ck you're doing and you're very impressive people in both of your respective areas of expertise, and I appreciate you guys being on the team.
               </p>
             </div>
-          </div>x
+          </div>
         </div>
       </div>
     </section>
@@ -289,6 +292,14 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script>
+  gsap.registerPlugin(ScrollTrigger);
+</script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", animateWaveAudio);
+</script>
+
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

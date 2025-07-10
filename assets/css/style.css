@@ -357,10 +357,11 @@ section {
 }
 
 .growth-right {
+    overflow-y: hidden;
     display: flex;
     flex-direction: column;
     /* padding-top: 7.5em; */
-    justify-content: start;
+    justify-content: end;
     align-items: center;
     gap: 5em;
     background-color: #D3DDE7;
@@ -390,9 +391,46 @@ section {
 
 
 
-.growth-right .item img{
+
+.growth-right .item .circle{
     width: 6.25em;
+    height: 6.25em;
+    border-radius: 50%;
+    background-color: #FF1AA3;
+  border: 3px solid #FF1AA3;
+    display: flex;
+    filter: blur(15.640113830566406px);
+    justify-content: center;
+    align-items: center;
 }
+
+.growth-right .line {
+  width: 0.1em;
+  height: 35em;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #161616 0px,
+    #161616 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  position: relative; /* penting untuk ::after positioning */
+}
+
+/* Panah di ujung bawah */
+.growth-right .line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 0.5em;
+  height: 0.5em;
+  border-right: 2px solid #161616;
+  border-bottom: 2px solid #161616;
+}
+
+
 
 .arrow{
     width: 2.5em;
@@ -589,11 +627,25 @@ section {
 
 .wave {
     display: flex;
+    justify-content: center;
+    align-items: end;
     gap: 2.75em;
     width: 100%;
     overflow-x: hidden;
     /* clip-path: inset(100px 50px); */
 }
+
+.wave img{
+    width: 5em;
+    height: 5em;
+}
+
+
+#waveform {
+  width: 100%;
+  margin-top: 1rem;
+}
+
 
 @media screen and (max-width: 425px) {
     .wave {
