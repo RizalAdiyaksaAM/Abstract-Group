@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   ScrollTrigger.defaults({
         // optional: add markers for debugging
-    markers: true,
+    // markers: true,
   });
 
   document.fonts.ready.then(() => {
